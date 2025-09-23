@@ -66,7 +66,7 @@ def train(model, data_train, epochs, batch_size, lr):
     optim = torch.optim.Adam(model.parameters(), lr=lr, betas=(0.9, 0.999), eps=1e-7)
     loss_fn = nn.MSELoss()
     loader = torch.utils.data.DataLoader(
-        data_train, batch_size=batch_size, shuffle=True
+        data_train, batch_size=batch_size, shuffle=True, drop_last=True
     )
     step = 0
     for _ in trange(epochs, leave=False, desc="Training epochs"):
