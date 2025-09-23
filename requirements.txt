@@ -1,0 +1,8 @@
+numpy
+torch
+mlflow
+bonsai-nn-library
+tqdm
+pandas
+seaborn
+jsonargparse
